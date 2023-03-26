@@ -20,6 +20,10 @@ a {
     color: black;
 }
 
+
+
+
+
 /* NAVBAR */
 .navbar {
     display: flex;
@@ -47,67 +51,7 @@ a {
     font-size: x-large;
 }
 
-
-/* HOME */
-.home {
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-.social-icons {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    text-align: center;
-    gap: 2rem;
-    margin-top: 100px;
-}
-.social-icon {
-    font-size: 1.5rem;
-}
-.home-text {
-    flex: 4;
-    margin-left: 5rem;
-}
-.home-text h1 {
-    font-size: 40px;
-}
-.home-text .btn {
-    margin-block: 2rem;
-    padding: .8rem 3.5rem;
-    font-size: large;
-    background-color: white;
-    border: 2px solid var(--clr-blue);
-    color: var(--clr-blue);
-    border-radius: 5px;
-    cursor: pointer;
-}
-.home-mini-text {
-    display: flex;
-    gap: 5rem;
-}
-.home-arrow {
-    font-size: xx-large;
-    color: var(--clr-blue);
-}
-.home-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 4;
-}
-.home .mask {
-    mask-image: url('./assets//Twitter-logo.svg.png');
-    mask-size: 20rem;
-    mask-repeat: no-repeat;
-  
-    -webkit-mask-size: 100%;
-    -webkit-mask-image: url('./assets/Twitter-logo.svg.png');
-    -webkit-mask-repeat: no-repeat;
-}
-
-/* HOME MODAL */
+/* NAVBAR - LANGUAGE MODAL... */
 .dropdown-globe,
 .dropdown-music {
     position: relative;
@@ -127,7 +71,6 @@ a {
 .dropdown-music:hover .music-modal {
     display: block;
 }
-
 .language-modal:before {
     content: "";
     width: 0px;
@@ -144,8 +87,6 @@ a {
     background-color: rgba(245, 245, 245, 0.297);
     height: 1px;
 }
-
-/* HOME LANGUAGE MODAL */
 .language-option {
     display: flex;
     align-items: center;
@@ -169,7 +110,7 @@ a {
     height: 25px;
 }
 
-/* HOME MUSIC MODAL */
+/* NAVBAR - MUSIC MODAL */
 .music-modal {
     display: none;
     position: absolute;
@@ -230,4 +171,143 @@ a {
 }
 .hi:hover {
     color: black;
+}
+
+
+
+
+
+/* SOCIAL ICONS */
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    gap: 2rem;
+    margin-left: 4rem;
+    margin-top: 40vh;
+}
+.social-icon {
+    font-size: 1.5rem;
+}
+
+
+
+
+/* HOME */
+.home {
+    height: 90vh;
+    display: flex;
+    width: 100%;
+}
+.home-text {
+    width: 50%;
+    margin-top: 30vh;
+}
+.home-text h1 {
+    font-size: 40px;
+}
+.home-text .btn {
+    margin-block: 2rem;
+    padding: .8rem 3.5rem;
+    font-size: large;
+    background-color: white;
+    border: 2px solid var(--clr-blue);
+    color: var(--clr-blue);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.home-mini-text {
+    display: flex;
+    gap: 5rem;
+}
+.home-arrow {
+    font-size: xx-large;
+    color: var(--clr-blue);
+}
+.home-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    margin-top: 10vh;
+}
+.home .mask {
+    mask-image: url('./assets//Twitter-logo.svg.png');
+    mask-size: 20rem;
+    mask-repeat: no-repeat;
+  
+    -webkit-mask-size: 100%;
+    -webkit-mask-image: url('./assets/Twitter-logo.svg.png');
+    -webkit-mask-repeat: no-repeat;
+}
+
+
+/* PORTFOLIO */
+.portfolio-wrapper {
+    display: flex;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.portfolio {
+    width: 90%;
+    margin-top: 30vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.portfolio-text h1 {
+    font-size: 40px;
+}
+.portfolio-mini-text {
+    color: var(--clr-blue);
+    margin-top: 10px;
+}
+.portfolio-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.portfolio-item {
+    width: auto;
+    height: auto;
+    box-shadow: 5px 5px 8px 3px rgba(0, 0, 0, 0.144);
+    position: relative;
+}
+.portfolio-item img {
+    height: 100%;
+    width: 100%;
+}
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.834);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 2rem 2rem 4rem 2rem;
+    text-align: center;
+    line-height: 25px;
+}
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+.btn-visit {
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: .8rem;
+}
+.btn-visit:hover {
+    color: var(--clr-blue);
 }

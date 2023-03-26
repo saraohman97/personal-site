@@ -9,7 +9,7 @@ import Navbar from './components/Navbar'
 
 function App() {
   return (
-    <div className="container">
+    <div className='container'>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
