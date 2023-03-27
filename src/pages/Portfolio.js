@@ -22,7 +22,6 @@ const Portfolio = () => {
             <div className="portfolio-overlay">
               <h1>FlexiClean</h1>
               <p>Orenat dagvatten kan orsaka stora miljöproblem och skada våra vattenresurser. FlexiClean är en ﬁlterhållare för rening av process- och dag-vatten.</p>
-              {/* <p>This is an upgrade on the current website owned by FlexiClean. FlexiClean is selling water filter for better lake and ocean habitat.</p> */}
               <a href="http://" className='btn-visit'>Besök sajten</a>
             </div>
           </div>
