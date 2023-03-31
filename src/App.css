@@ -40,20 +40,22 @@ button {
     margin-block: 2rem;
     padding: .8rem 3.5rem;
     font-size: large;
-    background-color: white;
-    border: 2px solid var(--clr-blue);
-    color: var(--clr-blue);
+
     border-radius: 5px;
     cursor: pointer;
     width: fit-content;
+    background-color: var(--clr-blue);
+    border: 2px solid var(--clr-blue);
+    color: white;
 
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 button:hover {
-    background-color: var(--clr-blue);
-    color: white;
+    background-color: white;
+    border: 2px solid var(--clr-blue);
+    color: var(--clr-blue);
 }
 .blue {
     color: var(--clr-blue);
@@ -259,6 +261,9 @@ button:hover {
     position: absolute;
     bottom: 2rem;
 }
+.scroll-text:hover {
+    padding-bottom: 10px;
+}
 
 .home-img {
     display: flex;
@@ -310,7 +315,10 @@ button:hover {
     width: 9rem;
     text-align: center;
 }
-
+.number-display p {
+    font-weight: 600;
+    color: rgb(47, 47, 47);
+}
 
 
 

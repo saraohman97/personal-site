@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import self from '../assets/self.png'
 
 const About = () => {
@@ -33,7 +34,9 @@ const About = () => {
             </div>
           </div>
 
+          <Link to='/Frontend-utvecklare-cv.pdf' target="_blank" download>Download</Link>
           <button>Ladda ner CV</button>
+          {/* <Link to="/files/myfile.pdf" target="_blank" download>Download</Link> */}
         </div>
       </div>
     </div>

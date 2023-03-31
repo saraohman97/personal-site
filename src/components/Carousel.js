@@ -73,7 +73,7 @@ const Carousel = ({ children }) => {
                         updateIndex(activeIndex - 1);
                     }}
                 >
-                    <BsChevronLeft size='3rem' />
+                    <BsChevronLeft size='2.5rem' />
                 </button>
 
                 {/* --------------page labels------------- */}
@@ -97,7 +97,7 @@ const Carousel = ({ children }) => {
                         updateIndex(activeIndex + 1);
                     }}
                 >
-                    <BsChevronRight size='3rem' />
+                    <BsChevronRight size='2.5rem' />
                 </button>
             </div>
         </div>
