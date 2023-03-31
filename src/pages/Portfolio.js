@@ -28,8 +28,6 @@ const Portfolio = () => {
             <button>Demo <HiArrowLongRight /> </button>
           </div>
         </CarouselItem>
-        <CarouselItem>Item 3</CarouselItem>
-        <CarouselItem>Item 4</CarouselItem>
       </Carousel>
 
     </div>

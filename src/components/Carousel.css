@@ -1,6 +1,6 @@
 .carousel {
     overflow: hidden;
-    margin-block: 2rem;
+    margin-block: 4rem 2rem;
 }
 
 .inner {
@@ -10,18 +10,17 @@
 
 .carousel-item {
     display: inline-flex;
-    /* align-items: center; */
     justify-content: center;
     gap: 3rem;
-    /* height: 200px; */
-    background-color: green;
+    /* background-color: green; */
     color: black;
+    margin-bottom: 50px;
 }
 .carousel-item img {
     width: 400px;
 }
 .carousel-item .portfolio-text {
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
     max-width: 500px;
 
     word-break: break-word;
@@ -38,6 +37,41 @@
 }
 
 .indicators > button.active {
-    background-color: green;
+    background-color: #2e4674;
     color: white;
+}
+
+.btn-prev {
+    position: absolute;
+    bottom: 47%;
+    left: 0;
+
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.btn-next {
+    position: absolute;
+    bottom: 47%;
+    right: 0;
+
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.btn-prev:hover, .btn-next:hover {
+    background-color: transparent;
+    color: #2e4674;
+}
+
+.btn-dots {
+    background-color: #7BA3ED;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    border: none;
+    margin: 0;
+    padding: 0;
 }
