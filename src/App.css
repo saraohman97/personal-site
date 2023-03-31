@@ -11,6 +11,7 @@
 html, body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 300;
+    background-color: white;
 }
 .container {
     width: 90%;
@@ -22,7 +23,43 @@ a {
 }
 h1 {
     font-size: 40px;
+    margin-bottom: 10px;
 }
+p {
+    line-height: 22px;
+}
+.df {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+.home p {
+    margin-top: 1rem;
+}
+button {
+    margin-block: 2rem;
+    padding: .8rem 3.5rem;
+    font-size: large;
+    background-color: white;
+    border: 2px solid var(--clr-blue);
+    color: var(--clr-blue);
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+button:hover {
+    background-color: var(--clr-blue);
+    color: white;
+}
+.blue {
+    color: var(--clr-blue);
+}
+
+
 
 
 
@@ -212,39 +249,25 @@ h1 {
     width: 100%;
 }
 .home-text {
-    width: 50%;
+    width: 36%;
     margin-top: 30vh;
 }
-.home-text .btn {
-    margin-block: 2rem;
-    padding: .8rem 3.5rem;
-    font-size: large;
-    background-color: white;
-    border: 2px solid var(--clr-blue);
-    color: var(--clr-blue);
-    border-radius: 5px;
-    cursor: pointer;
-}
-.home-text .btn:hover {
-    background-color: var(--clr-blue);
-    color: white;
-}
-.home-mini-text {
+.scroll-text {
     display: flex;
-    gap: 5rem;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 2rem;
 }
-.home-arrow {
-    font-size: xx-large;
-    color: var(--clr-blue);
-}
+
 .home-img {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    width: 50%;
     margin-top: 10vh;
 }
-.home .mask {
+.home .mask, .about .mask {
     mask-image: url('./assets//Twitter-logo.svg.png');
     mask-size: 20rem;
     mask-repeat: no-repeat;
@@ -252,162 +275,65 @@ h1 {
     -webkit-mask-size: 100%;
     -webkit-mask-image: url('./assets/Twitter-logo.svg.png');
     -webkit-mask-repeat: no-repeat;
+
+    margin-left: 4rem;
 }
+
+
+
+
+
+
+.about {
+    height: 100vh;
+    padding-top: 5rem;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.about-text {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+.number-display {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+}
+.number-display-item {
+    width: 9rem;
+    text-align: center;
+}
+
+
+
+
+
+
 
 /* PORTFOLIO */
-.portfolio-wrapper {
-    display: flex;
-    width: 100%;
-    margin-bottom: 2rem;
-}
-.portfolio {
-    width: 90%;
-    margin-top: 30vh;
+#portfölj {
+    height: 100vh;
+    padding-top: 5rem;
 
     display: flex;
+    align-items: center;
     flex-direction: column;
-    gap: 2rem;
-}
-.portfolio-mini-text {
-    color: var(--clr-blue);
-    margin-top: 10px;
-}
-.portfolio-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
 }
 .portfolio-item {
-    width: auto;
-    height: auto;
-    box-shadow: 5px 5px 8px 3px rgba(0, 0, 0, 0.144);
-    position: relative;
-}
-.portfolio-item img {
-    height: 100%;
-    width: 100%;
-}
-.portfolio-overlay {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.834);
-    backdrop-filter: blur(5px);
-    opacity: 0;
-    transition: opacity 150ms ease-in-out;
-
     display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    padding: 2rem 2rem 4rem 2rem;
-    text-align: center;
-    line-height: 25px;
-}
-.portfolio-item:hover .portfolio-overlay {
-    opacity: 1;
-}
-.btn-visit {
-    position: absolute;
-    bottom: 0;
-    background-color: black;
-    color: white;
-    width: 100%;
-    text-align: center;
-    padding: .8rem;
-}
-.btn-visit:hover {
-    color: var(--clr-blue);
-}
-
-
-
-/* CONTACT */
-.contact {
-    display: flex;
-    width: 100%;
-    margin-bottom: 2rem;
-}
-.contact-text {
-    width: 40%;
-    margin-top: 30vh;
-
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-}
-.contact-text h3 {
-    margin-top: 1rem;
-    color: var(--clr-blue);
-}
-
-
-.contact-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    margin-top: 30vh;
-}
-.contact .mask {
-    mask-image: url('./assets//Twitter-logo.svg.png');
-    mask-size: 20rem;
-    mask-repeat: no-repeat;
-  
-    -webkit-mask-size: 100%;
-    -webkit-mask-image: url('./assets/Twitter-logo.svg.png');
-    -webkit-mask-repeat: no-repeat;
-}
-
-
-
-
-
-
-
-/* BLOG */
-.blog-text {
-    margin-left: 14.5%;
-    width: 40%;
-    margin-top: 30vh;
-}
-.blog-list {
-    margin-block: 3rem;
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 2rem;
 }
-
-/* post */
-.post {
+.portfolio-text {
+    width: 35%;
     display: flex;
-    gap: 3rem;
-}
-.post-text {
-    width: 50%;
-    height: 100%;
-    border: 2px solid var(--clr-blue);
-    border-radius: 5px;
-    padding: 2rem;
-    line-height: 25px;
-}
-.post-text small {
-    color: var(--clr-blue);
-}
-.post-img {
-    width: 50%;
-    text-align: end;
-    position: relative;
-    border-radius: 5px;
-}
-.post-img small {
-    position: absolute;
-    right: 0;
-    top: -1.4rem;
-    color: gray;
-}
-.post-img img {
-    width: 100%;
-    border: 1px solid blue;
+    flex-direction: column;
+    gap: 1rem;
 }

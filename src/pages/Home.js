@@ -1,8 +1,9 @@
 import React from 'react'
 import SocialIcons from '../components/SocialIcons'
-import { HiArrowLongRight } from "react-icons/hi2"
+import { HiArrowLongDown } from "react-icons/hi2"
 import self from '../assets/self.png'
-import { Link } from 'react-router-dom'
+import { BsFillMouse2Fill } from "react-icons/bs"
+import { NavHashLink as Link } from 'react-router-hash-link'
 
 const Home = () => {
   return (
@@ -11,10 +12,14 @@ const Home = () => {
 
       <div className="home-text">
         <h1>Hej. Jag är Sara. <br />En Frontend utvecklare.</h1>
-        <Link to='/portfolie'><button className='btn'>Kolla in projekt</button></Link>
-        <div className='home-mini-text'>
-          <Link to='/blogg'><p>Jag har en blogg också, <br />för varför inte?</p></Link>
-          <Link to='/blogg' className='home-arrow'><HiArrowLongRight /></Link>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam corrupti, omnis fugit dolor dolores, dolorem laboriosam ex odio iste est.</p>
+        <Link to='#portfölj'><button>Kolla in projekt</button></Link>
+
+        <div className="scroll-text">
+          <BsFillMouse2Fill color='#7BA3ED' size='25px' />
+          <small>Scrolla neråt</small>
+          <HiArrowLongDown color='#7BA3ED' size='25px' />
         </div>
       </div>
 

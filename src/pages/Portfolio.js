@@ -1,40 +1,48 @@
-import React from 'react'
-import SocialIcons from '../components/SocialIcons'
-import flexiclean from '../assets/flexiclean.png'
-import carelyo from '../assets/carelyo.png'
+// import flexiclean from '../assets/flexiclean.png'
+// import carelyo from '../assets/carelyo.png'
+// import { HiArrowLongRight } from "react-icons/hi2"
+import Carousel, { CarouselItem } from '../components/Carousel'
 
 const Portfolio = () => {
   return (
-    <div className='portfolio-wrapper'>
-      <SocialIcons />
+    <div id='portfölj'>
+      <h1>Portfölj</h1>
+      <p>Mest nyligen arbeten</p>
 
-      <div className='portfolio'>
-        <div className="portfolio-text">
-          <h1>Hej. Jag är Sara. <br />En Frontend utvecklare.</h1>
-          <div className='portfolio-mini-text'>
-            <p>Det här är mina projekt hittills.</p>
-          </div>
-        </div>
+      <Carousel>
+        <CarouselItem>Item 1</CarouselItem>
+        <CarouselItem>Item 2</CarouselItem>
+        <CarouselItem>Item 3</CarouselItem>
+        <CarouselItem>Item 4</CarouselItem>
+      </Carousel>
 
-        <div className="portfolio-list">
-          <div className='portfolio-item'>
-            <img src={flexiclean} alt="" />
-            <div className="portfolio-overlay">
-              <h1>FlexiClean</h1>
-              <p>Orenat dagvatten kan orsaka stora miljöproblem och skada våra vattenresurser. FlexiClean är en ﬁlterhållare för rening av process- och dag-vatten.</p>
-              <a href="http://" className='btn-visit'>Besök sajten</a>
+      {/* <div className="portfolio-carousel swiper-container">
+        <div className="swiper-wrapper">
+
+          <div className="portfolio-item swiper-slide">
+            <img src={flexiclean} alt="" width='400px' />
+
+            <div className='portfolio-text'>
+              <h4>FlexiClean</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quo unde voluptatem eveniet, sapiente quae ipsum nulla autem temporibus illo placeat ab incidunt sequi earum pariatur consequuntur eos maxime adipisci?</p>
+              <button>Demo <HiArrowLongRight /> </button>
             </div>
           </div>
-          <div className='portfolio-item'>
-            <img src={carelyo} alt="" />
-            <div className="portfolio-overlay">
-              <h1>Carelyo</h1>
-              <p>Företaget Swedcon18 verksammas med mjukvaruutveckling och IT-konsultation. Under 2022/2023 byggdes Carelyo applikationen. Carelyo är ett vårdföretag som erbjuder vård inom psykologi och medicin digitalt via mobilapplikationer.</p>
-              <a href="http://" className='btn-visit'>Besök sajten</a>
+
+          <div className="portfolio-item swiper-slide">
+            <img src={carelyo} alt="" width='400px' />
+
+            <div className='portfolio-text'>
+              <h4>Carelyo</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quo unde voluptatem eveniet, sapiente quae ipsum nulla autem temporibus illo placeat ab incidunt sequi earum pariatur consequuntur eos maxime adipisci?</p>
+              <button>Demo <HiArrowLongRight /> </button>
             </div>
           </div>
+
         </div>
-      </div>
+      </div> */}
+
+
     </div>
   )
 }
