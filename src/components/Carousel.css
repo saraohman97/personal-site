@@ -1,5 +1,6 @@
 .carousel {
     overflow: hidden;
+    margin-block: 2rem;
 }
 
 .inner {
@@ -9,11 +10,22 @@
 
 .carousel-item {
     display: inline-flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
-    height: 200px;
+    gap: 3rem;
+    /* height: 200px; */
     background-color: green;
-    color: white;
+    color: black;
+}
+.carousel-item img {
+    width: 400px;
+}
+.carousel-item .portfolio-text {
+    border: 1px solid pink;
+    max-width: 500px;
+
+    word-break: break-word;
+    white-space: normal;
 }
 
 .indicators {
