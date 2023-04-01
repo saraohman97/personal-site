@@ -4,6 +4,7 @@ import Portfolio from './pages/Portfolio';
 import Navbar from './components/Navbar'
 import About from './pages/About';
 import Footer from './components/Footer';
+import Skills from './pages/Skills'
 
 
 
@@ -15,6 +16,7 @@ function App() {
 
       <Home />
       <About />
+      <Skills />
       <Portfolio />
 
       <Footer />

@@ -34,9 +34,7 @@ const About = () => {
             </div>
           </div>
 
-          <Link to='/Frontend-utvecklare-cv.pdf' target="_blank" download>Download</Link>
-          <button>Ladda ner CV</button>
-          {/* <Link to="/files/myfile.pdf" target="_blank" download>Download</Link> */}
+          <Link to='/Frontend-utvecklare-cv.pdf' target="_blank" download><button>Ladda ner CV</button></Link>
         </div>
       </div>
     </div>
