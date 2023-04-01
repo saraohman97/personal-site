@@ -4,7 +4,7 @@ import self from '../assets/self.png'
 
 const Contact = () => {
   return (
-    <div className='contact' id='contact'>
+    <div className='contact'>
       <SocialIcons />
 
       <div className="contact-text">

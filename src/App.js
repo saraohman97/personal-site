@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import Navbar from './components/Navbar'
 import About from './pages/About';
+import Footer from './components/Footer';
 
 
 
@@ -16,7 +17,7 @@ function App() {
       <About />
       <Portfolio />
 
-
+      <Footer />
     </div>
   );
 }
