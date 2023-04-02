@@ -1,7 +1,7 @@
 import React from 'react'
 import SocialIcons from '../components/SocialIcons'
 import { HiArrowLongDown } from "react-icons/hi2"
-import self from '../assets/self.png'
+import self from '../assets/self-2.png'
 import { BsFillMouse2Fill } from "react-icons/bs"
 import { NavHashLink as Link } from 'react-router-hash-link'
 
@@ -18,14 +18,14 @@ const Home = () => {
 
         <Link to='#om-mig' className="scroll-text">
           <BsFillMouse2Fill color='#7BA3ED' size='25px' />
-          <small>Scrolla neråt</small>
+          <small>Skrolla neråt</small>
           <HiArrowLongDown color='#7BA3ED' size='25px' />
         </Link>
       </div>
 
       <div className="home-img">
         <div className='mask'>
-          <img src={self} alt="" width={400} />
+          <img src={self} alt="" />
         </div>
       </div>
     </div>

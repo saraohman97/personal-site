@@ -270,15 +270,20 @@ button:hover {
     align-items: center;
     justify-content: center;
     width: 50%;
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
 }
-.home .mask, .about .mask {
-    mask-image: url('./assets//Twitter-logo.svg.png');
-    mask-size: 20rem;
+.home .mask {
+    /* mask-image: url('./assets//Twitter-logo.svg.png'); */
+    mask-image: url('./assets/mask-3.png');
+    /* mask-image: url('./assets/square.png'); */
+    /* mask-size: 20rem; */
+    /* mask-size: contain; */
+    mask-size: contain;
+    mask-position: top;
     mask-repeat: no-repeat;
 
-    -webkit-mask-size: 100%;
-    -webkit-mask-image: url('./assets/Twitter-logo.svg.png');
+    /* -webkit-mask-size: 100%; */
+    /* -webkit-mask-image: url('./assets/mask-2.png'); */
     -webkit-mask-repeat: no-repeat;
 
     margin-left: 4rem;
@@ -318,6 +323,21 @@ button:hover {
 .number-display p {
     font-weight: 600;
     color: rgb(47, 47, 47);
+}
+.about .mask {
+    /* mask-image: url('./assets//Twitter-logo.svg.png'); */
+    mask-image: url('./assets/mask-3.png');
+    /* mask-image: url('./assets/square.png'); */
+
+    mask-size: contain;
+    mask-position: top;
+    mask-repeat: no-repeat;
+
+    /* -webkit-mask-size: 100%; */
+    /* -webkit-mask-image: url('./assets/mask-2.png'); */
+    -webkit-mask-repeat: no-repeat;
+
+    margin-left: 4rem;
 }
 
 
@@ -374,13 +394,40 @@ button:hover {
 
 .btn-copy {
     padding: .5rem 0;
+    position: relative;
+    display: inline-block;
 }
 .btn-copy:hover {
-    color: pink;
     cursor: pointer;
 }
 .btn-copy:active {
     color: #7BA3ED;
+}
+.hover-btn-msg {
+    display: none;
+    position: absolute;
+    background-color: var(--clr-blue);
+    bottom: -2rem;
+    right: -4rem;
+    padding: .2rem .5rem;
+    border-radius: .2rem;
+    color: white;
+}
+.hover-btn-msg:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 5px solid var(--clr-blue);
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid var(--clr-blue);
+    border-top: 5px solid transparent;
+    left: 10px;
+    top: -10px;
+
+}
+.btn-copy:hover .hover-btn-msg {
+    display: block;
 }
 
 
@@ -401,7 +448,7 @@ button:hover {
 }
 #kunskaper .bg {
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 4rem;
     
     background-image: url('./assets/skills/birds-icons.png');
     background-position: center;

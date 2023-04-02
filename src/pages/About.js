@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import self from '../assets/self.png'
+import self from '../assets/self-2.png'
 
 const About = () => {
   return (
@@ -10,7 +10,7 @@ const About = () => {
       <div className="df">
         <div className="home-img">
           <div className='mask'>
-            <img src={self} alt="" width={400} />
+            <img src={self} alt="" width={500} />
           </div>
         </div>
 
@@ -20,7 +20,7 @@ const About = () => {
           <div className="number-display">
             <div className="number-display-item">
               <h1 className='blue'>1+</h1>
-              <p>År programmerings vanna</p>
+              <p>År programmerings vana</p>
             </div>
 
             <div className="number-display-item">
