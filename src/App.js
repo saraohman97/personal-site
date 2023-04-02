@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import About from './pages/About';
 import Footer from './components/Footer';
 import Skills from './pages/Skills'
+import ScrollButton from './components/ScrollButton';
 
 
 
@@ -20,6 +21,7 @@ function App() {
       <Portfolio />
 
       <Footer />
+      <ScrollButton />
     </div>
   );
 }

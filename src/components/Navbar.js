@@ -9,8 +9,8 @@ const Navbar = () => {
     return (
         <div className='navbar'>
             <NavLink to='#om-mig'>Om mig</NavLink>
-            <NavLink to='#portfölj' >Projekt portfölj</NavLink>
             <NavLink to='#kunskaper'>Kunskaper</NavLink>
+            <NavLink to='#portfölj' >Projekt portfölj</NavLink>
             <NavLink to='#kontakta-mig'>Kontakta mig</NavLink>
             <div className='nav-icons'>
                 <div className='nav-icon dropdown-globe'><BsGlobe2 /><LanguageModal /></div>
