@@ -117,6 +117,7 @@ button:hover {
 .dropdown-music {
     position: relative;
     display: inline-block;
+    transition: .3s;
 }
 .language-modal {
     display: none;
@@ -127,6 +128,7 @@ button:hover {
 
     border-radius: .5rem 0 .5rem .5rem;
     background-color: rgba(0, 0, 0, 0.602);
+    width: 150px;
 }
 .dropdown-globe:hover .language-modal,
 .dropdown-music:hover .music-modal {
@@ -141,13 +143,15 @@ button:hover {
     border-left: 12px solid transparent;
     border-bottom: 12px solid rgba(0, 0, 0, 0.602);
     border-top: 20px solid transparent;
-    left: 91px;
-    bottom: 99px;
+    /* left: 91px;
+    bottom: 99px; */
+    left: 114px;
+    top: -32px;
 }
-.line {
+/* .line {
     background-color: rgba(245, 245, 245, 0.297);
     height: 1px;
-}
+} */
 .language-option {
     display: flex;
     align-items: center;
@@ -155,14 +159,10 @@ button:hover {
     padding: 12px 16px;
     color: whitesmoke;
 }
-.he:hover {
-    background-color: #7BA3ED;
-    border-radius: .5rem 0 0 0;
+.language-option:hover {
+    color: var(--clr-blue);
 }
-.hs:hover {
-    background-color: #7BA3ED;
-    border-radius: 0 0 .5rem .5rem;
-}
+
 .language-option p {
     font-size: 16px;
 }
@@ -408,6 +408,7 @@ button:hover {
     padding: .5rem 0;
     position: relative;
     display: inline-block;
+
 }
 .btn-copy:hover {
     cursor: pointer;

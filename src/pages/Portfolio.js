@@ -3,11 +3,11 @@ import carelyo from '../assets/carelyo.png'
 import { HiArrowLongRight } from "react-icons/hi2"
 import Carousel, { CarouselItem } from '../components/Carousel'
 
-const Portfolio = () => {
+const Portfolio = ({ english }) => {
   return (
     <div id='portfölj'>
-      <h1>Portfölj</h1>
-      <p>Mest nyligen arbeten</p>
+      <h1>{english === true ? 'Portfolio' : 'Portfölj'}</h1>
+      <p>{english === true ? 'Most recent work' : 'Mest nyligen arbeten'}</p>
 
       <Carousel>
         <CarouselItem>

@@ -5,11 +5,11 @@
 // import react from '../assets/skills/react.png'
 // import vue from '../assets/skills/vue.png'
 
-const Skills = () => {
+const Skills = ({ english }) => {
   return (
     <div id='kunskaper'>
-      <h1>Kunskaper</h1>
-      <p>Mina tekniska kunskaper</p>
+      <h1>{english === true ? 'Skills' : 'Kunskaper'}</h1>
+      <p>{english === true ? 'My technical skills' : 'Mina tekniska kunskaper'}</p>
 
       <div className="bg">
         {/* <img src={css} alt="" width={50} className='css' />

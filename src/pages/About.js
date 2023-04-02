@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 import self from '../assets/self-2.png'
 
-const About = () => {
+const About = ({english}) => {
   return (
     <div className='about' id='om-mig'>
-      <h1>Om mig</h1>
-      <p>Min introduktion</p>
+      <h1>{english === true ? 'About me' : 'Om mig'}</h1>
+      <p>{english === true ? 'My introduction' : 'Min introduktion'}</p>
 
       <div className="df">
         <div className="home-img">
@@ -20,21 +20,21 @@ const About = () => {
           <div className="number-display">
             <div className="number-display-item">
               <h1 className='blue'>1+</h1>
-              <p>År programmerings vana</p>
+              <p>{english === true ? 'Years programming experience' : 'År programmerings vana'}</p>
             </div>
 
             <div className="number-display-item">
               <h1 className='blue'>5+</h1>
-              <p>Färdiga projekt</p>
+              <p>{english === true ? 'Completed projects' : 'Färdiga project'}</p>
             </div>
 
             <div className="number-display-item">
               <h1 className='blue'>0</h1>
-              <p>Tidigare arbetsplatser</p>
+              <p>{english === true ? 'Previous workplaces' : 'Tidigare arbetsplatser'}</p>
             </div>
           </div>
 
-          <Link to='/Frontend-utvecklare-cv.pdf' target="_blank" download><button>Ladda ner CV</button></Link>
+          <Link to='/Frontend-utvecklare-cv.pdf' target="_blank" download><button>{english === true ? 'Download CV' : 'Ladda ner CV'}</button></Link>
         </div>
       </div>
     </div>

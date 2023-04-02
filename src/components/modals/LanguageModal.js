@@ -2,19 +2,23 @@ import React from 'react'
 import england from '../../assets/england.png'
 import sweden from '../../assets/sweden.png'
 
-const LanguageModal = () => {
+const LanguageModal = ({ setEnglish, english }) => {
   return (
     <div className='language-modal'>
-        <div className='language-option he'>
-            <img src={england} alt="" />
-            <p>English</p>
-        </div>
-        <div className="line"></div>
-        <div className='language-option hs'>
+      {english === true ? (
+        <div className='language-option' onClick={() => setEnglish(false)}>
             <img src={sweden} alt="" />
             <p>Svenska</p>
         </div>
-    </div>
+      ) : (
+        // <div className="line"></div>
+        <div className='language-option' onClick={() => setEnglish(true)}>
+          <img src={england} alt="" />
+          <p>English</p>
+        </div>
+  )
+}
+  </div>
   )
 }
 
