@@ -1,0 +1,68 @@
+
+
+/* FOOTER */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid var(--clr-blue);
+    padding-block: 5rem;
+
+    width: 80%;
+    margin: 0 auto;
+}
+.footer .right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.footer .right a:hover {
+    color: var(--clr-blue);
+}
+.footer .center {
+    width: 500px;
+}
+.contact-info {
+    display: flex;
+    margin-top: 2rem;
+    gap: 5rem;
+}
+
+.btn-copy {
+    padding: .5rem 0;
+    position: relative;
+    display: inline-block;
+
+}
+.btn-copy:hover {
+    cursor: pointer;
+}
+.btn-copy:active {
+    color: #7BA3ED;
+}
+.hover-btn-msg {
+    display: none;
+    position: absolute;
+    background-color: var(--clr-blue);
+    bottom: -2rem;
+    right: -4rem;
+    padding: .2rem .5rem;
+    border-radius: .2rem;
+    color: white;
+}
+.hover-btn-msg:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 5px solid var(--clr-blue);
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid var(--clr-blue);
+    border-top: 5px solid transparent;
+    left: 10px;
+    top: -10px;
+
+}
+.btn-copy:hover .hover-btn-msg {
+    display: block;
+}

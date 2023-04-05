@@ -25,7 +25,7 @@ const Portfolio = ({ english }) => {
           <div className='portfolio-text'>
             <h3>Carelyo</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quo unde voluptatem eveniet, sapiente quae ipsum nulla autem temporibus illo placeat ab incidunt sequi earum pariatur consequuntur eos maxime adipisci?</p>
-            <button>Demo <HiArrowLongRight /> </button>
+            <button>Demo <HiArrowLongRight /></button>
           </div>
         </CarouselItem>
       </Carousel>

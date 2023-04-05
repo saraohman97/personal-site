@@ -1,7 +1,6 @@
 :root {
     --clr-blue: #7BA3ED;
 }
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Bungee+Hairline&display=swap');
 
 * {
     margin: 0;
@@ -22,6 +21,7 @@ a {
     text-decoration: none;
     color: black;
     transition: .3s;
+    width: fit-content;
 }
 h1 {
     font-size: 40px;
@@ -35,17 +35,12 @@ p {
     align-items: center;
     gap: 5rem;
 }
-.home p {
-    margin-top: 1rem;
-}
 button {
-    margin-block: 2rem;
     padding: .8rem 3.5rem;
     font-size: large;
 
     border-radius: 5px;
     cursor: pointer;
-    width: fit-content;
     background-color: var(--clr-blue);
     border: 2px solid var(--clr-blue);
     color: white;
@@ -64,10 +59,14 @@ button:hover {
     color: var(--clr-blue);
 }
 
+
+
+
+/* SCROLL BUTTON */
 .btn-scroll {
     position: fixed; 
     right: 40px;
-    bottom: 40px;
+    bottom: 80px;
     color: var(--clr-blue);
     cursor: pointer;
     transition: .3s;
@@ -75,165 +74,6 @@ button:hover {
 .btn-scroll:hover {
     color: black;
 }
-
-
-
-
-/* NAVBAR */
-.navbar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    
-    height: 10vh;
-}
-.navbar a {
-    padding: .5rem 1rem;
-    margin: 0 1rem;
-    text-decoration: none;
-    color: black;
-}
-.navbar a:hover {
-    color: var(--clr-blue);
-}
-.nav-icons {
-    padding-left: 5rem;
-    display: flex;
-    flex-direction: row;
-}
-.nav-icon {
-    padding: .5rem 1rem;
-    margin: 0 .5rem;
-    cursor: pointer;
-    font-size: x-large;
-}
-.nav-icon:hover {
-    color: var(--clr-blue);
-}
-
-/* NAVBAR - LANGUAGE MODAL... */
-.dropdown-globe,
-.dropdown-music {
-    position: relative;
-    display: inline-block;
-    transition: .3s;
-}
-.language-modal {
-    display: none;
-    position: absolute;
-    z-index: 20;
-    top: 4.5rem;
-    right: 27px;
-
-    border-radius: .5rem 0 .5rem .5rem;
-    background-color: rgba(0, 0, 0, 0.602);
-    width: 150px;
-}
-.dropdown-globe:hover .language-modal,
-.dropdown-music:hover .music-modal {
-    display: block;
-}
-.language-modal:before {
-    content: "";
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    border-right: 24px solid rgba(0, 0, 0, 0.602);
-    border-left: 12px solid transparent;
-    border-bottom: 12px solid rgba(0, 0, 0, 0.602);
-    border-top: 20px solid transparent;
-    /* left: 91px;
-    bottom: 99px; */
-    left: 114px;
-    top: -32px;
-}
-/* .line {
-    background-color: rgba(245, 245, 245, 0.297);
-    height: 1px;
-} */
-.language-option {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 16px;
-    color: whitesmoke;
-}
-.language-option:hover {
-    color: var(--clr-blue);
-}
-
-.language-option p {
-    font-size: 16px;
-}
-.language-option img {
-    width: 25px;
-    height: 25px;
-}
-
-/* NAVBAR - MUSIC MODAL */
-.music-modal {
-    display: none;
-    position: absolute;
-    z-index: 20;
-    top: 4.5rem;
-    right: 27px;
-    border-radius: .5rem 0 .5rem .5rem;
-    background-color: rgba(0, 0, 0, 0.602);
-
-    padding: 30px;
-    width: 320px;
-    color: whitesmoke;
-}
-.music-modal:before {
-    content: "";
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    border-right: 24px solid rgba(0, 0, 0, 0.602);
-    border-left: 12px solid transparent;
-    border-bottom: 12px solid rgba(0, 0, 0, 0.602);
-    border-top: 20px solid transparent;
-    left: 284px;
-    top: -32px;
-}
-.music-record {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    line-height: 1.2rem;
-}
-.music-record img {
-    width: 80px;
-    height: 80px;
-}
-.music-record-text strong {
-    font-size: 18px;
-}
-.music-record-text small {
-    font-size: 15px;
-}
-.music-player-play {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding-top: 1rem;
-}
-.music-player-volume {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-top: 1rem;
-}
-.volume-line {
-    height: 3px;
-    width: 100%;
-    background-color: whitesmoke;
-}
-.hi:hover {
-    color: black;
-}
-
 
 
 
@@ -261,11 +101,15 @@ button:hover {
 .home {
     height: 90vh;
     display: flex;
-    width: 100%;
+    /* width: 100%; */
 }
 .home-text {
     width: 36%;
     margin-top: 30vh;
+}
+.home p {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 .scroll-text {
     display: flex;
@@ -284,20 +128,15 @@ button:hover {
     align-items: center;
     justify-content: center;
     width: 50%;
-    /* margin-top: 10vh; */
 }
 .home .mask {
-    /* mask-image: url('./assets//Twitter-logo.svg.png'); */
     mask-image: url('./assets/mask-3.png');
-    /* mask-image: url('./assets/square.png'); */
-    /* mask-size: 20rem; */
-    /* mask-size: contain; */
     mask-size: contain;
     mask-position: top;
     mask-repeat: no-repeat;
 
     /* -webkit-mask-size: 100%; */
-    /* -webkit-mask-image: url('./assets/mask-2.png'); */
+    -webkit-mask-image: url('./assets/mask-3.png');
     -webkit-mask-repeat: no-repeat;
 
     margin-left: 4rem;
@@ -329,6 +168,7 @@ button:hover {
     justify-content: space-between;
     gap: 1rem;
     width: 100%;
+    margin-bottom: 2rem;
 }
 .number-display-item {
     width: 9rem;
@@ -367,82 +207,9 @@ button:hover {
     flex-direction: column;
     position: relative;
 }
-#portfölj h3 {
-    margin-bottom: 10px;
+#portfölj p {
+    margin-block: 1rem 2rem;
 }
-
-
-
-
-
-
-/* FOOTER */
-.footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 2px solid var(--clr-blue);
-    padding-block: 5rem;
-
-    width: 80%;
-    margin: 0 auto;
-}
-.footer .right {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-.footer .right a:hover {
-    color: var(--clr-blue);
-}
-.footer .center {
-    width: 500px;
-}
-.contact-info {
-    display: flex;
-    margin-top: 2rem;
-    gap: 5rem;
-}
-
-.btn-copy {
-    padding: .5rem 0;
-    position: relative;
-    display: inline-block;
-
-}
-.btn-copy:hover {
-    cursor: pointer;
-}
-.btn-copy:active {
-    color: #7BA3ED;
-}
-.hover-btn-msg {
-    display: none;
-    position: absolute;
-    background-color: var(--clr-blue);
-    bottom: -2rem;
-    right: -4rem;
-    padding: .2rem .5rem;
-    border-radius: .2rem;
-    color: white;
-}
-.hover-btn-msg:before {
-    content: "";
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    border-left: 5px solid var(--clr-blue);
-    border-right: 12px solid transparent;
-    border-bottom: 12px solid var(--clr-blue);
-    border-top: 5px solid transparent;
-    left: 10px;
-    top: -10px;
-
-}
-.btn-copy:hover .hover-btn-msg {
-    display: block;
-}
-
 
 
 
