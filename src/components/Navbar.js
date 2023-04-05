@@ -20,22 +20,31 @@ const Navbar = ({ setEnglish, english }) => {
     }
 
     return (
-        <div className='navbar'>
-                <div className="nav-links">
+        <>
+            <div className='navbar'>
+                <NavLink to='#om-mig'>{english === true ? 'About me' : 'Om mig'}</NavLink>
+                <NavLink to='#kunskaper'>{english === true ? 'Skills' : 'Kunskaper'}</NavLink>
+                <NavLink to='#portfölj' >{english === true ? 'Project portfolio' : 'Projekt portfölj'}</NavLink>
+                <NavLink to='#kontakta-mig'>{english === true ? 'Contact me' : 'Kontakta mig'}</NavLink>
+                <div className='nav-icons'>
+                    <div className='nav-icon dropdown-globe'><BsGlobe2 /><LanguageModal english={english} setEnglish={setEnglish} /></div>
+                    <div className='nav-icon dropdown-music'><HiMusicNote /><MusicModal /></div>
+                </div>
+            </div>
+
+            <div className="navbar-mobile">
+                <div className={closeNav === true ? 'nav-links' : 'nav-links show-menu'}>
                     <NavLink to='#om-mig'><AiOutlineUser />{english === true ? 'About me' : 'Om mig'}</NavLink>
                     <NavLink to='#kunskaper'><FaReact />{english === true ? 'Skills' : 'Kunskaper'}</NavLink>
                     <NavLink to='#portfölj' ><AiOutlinePicture />{english === true ? 'Project portfolio' : 'Projekt portfölj'}</NavLink>
                     <NavLink to='#kontakta-mig'><TiContacts />{english === true ? 'Contact me' : 'Kontakta mig'}</NavLink>
                 </div>
-            <div className='nav-icons'>
-                <div className='nav-icon dropdown-globe'><BsGlobe2 /><LanguageModal english={english} setEnglish={setEnglish} /></div>
-                <div className='nav-icon dropdown-music'><HiMusicNote /><MusicModal /></div>
+                <div className="nav-menu">
+                    <p>SARA</p>
+                    <div onClick={toggleNav} className='btn-show'>{closeNav === true ? 'X' : '+'}</div>
+                </div>
             </div>
-            <div className="navbar-mobile">
-                <p>SARA</p>
-                <div onClick={toggleNav} className="btn-close-nav">{closeNav === false ? 'X' : '+'}</div>
-            </div>
-        </div>
+        </>
     )
 }
 
