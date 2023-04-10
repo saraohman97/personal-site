@@ -5,10 +5,16 @@ import self from '../assets/self-2.png'
 import { BsFillMouse2Fill } from "react-icons/bs"
 import { NavHashLink as Link } from 'react-router-hash-link'
 
-const Home = ({english}) => {
+const Home = ({ english }) => {
   return (
     <div className='home'>
       <SocialIcons />
+
+      <div className="home-img">
+        <div className='mask'>
+          <img src={self} alt="" />
+        </div>
+      </div>
 
       <div className="home-text">
         <h1>{english === true ? 'Hi. I am Sara.' : 'Hej. Jag är Sara.'} <br /> {english === true ? 'A Frontend developer.' : 'En Frontendutvecklare.'}</h1>
@@ -21,12 +27,6 @@ const Home = ({english}) => {
           <small>{english === true ? 'Scroll down' : 'Skrolla neråt'}</small>
           <HiArrowLongDown color='#7BA3ED' size='25px' />
         </Link>
-      </div>
-
-      <div className="home-img">
-        <div className='mask'>
-          <img src={self} alt="" />
-        </div>
       </div>
     </div>
   )
