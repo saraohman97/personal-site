@@ -34,10 +34,10 @@ const Navbar = ({ setEnglish, english }) => {
 
             <div className="navbar-mobile">
                 <div className={closeNav === true ? 'nav-links' : 'nav-links show-menu'}>
-                    <NavLink to='#om-mig'><AiOutlineUser />{english === true ? 'About me' : 'Om mig'}</NavLink>
-                    <NavLink to='#kunskaper'><FaReact />{english === true ? 'Skills' : 'Kunskaper'}</NavLink>
-                    <NavLink to='#portfölj' ><AiOutlinePicture />{english === true ? 'Project portfolio' : 'Projekt portfölj'}</NavLink>
-                    <NavLink to='#kontakta-mig'><TiContacts />{english === true ? 'Contact me' : 'Kontakta mig'}</NavLink>
+                    <NavLink to='#om-mig' onClick={toggleNav}><AiOutlineUser />{english === true ? 'About me' : 'Om mig'}</NavLink>
+                    <NavLink to='#kunskaper' onClick={toggleNav}><FaReact />{english === true ? 'Skills' : 'Kunskaper'}</NavLink>
+                    <NavLink to='#portfölj' onClick={toggleNav}><AiOutlinePicture />{english === true ? 'Project portfolio' : 'Projekt portfölj'}</NavLink>
+                    <NavLink to='#kontakta-mig' onClick={toggleNav}><TiContacts />{english === true ? 'Contact me' : 'Kontakta mig'}</NavLink>
                 </div>
                 <div className="nav-menu">
                     <p>SARA</p>

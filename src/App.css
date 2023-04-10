@@ -58,6 +58,10 @@ button:hover {
 .blue {
     color: var(--clr-blue);
 }
+img {
+    width: 100%;
+    min-width: 350px;
+}
 
 
 
@@ -77,10 +81,6 @@ button:hover {
 
 
 
-
-
-
-
 /* ------------------------------home--------------------------------- */
 /* SOCIAL ICONS */
 .social-icons {
@@ -89,7 +89,7 @@ button:hover {
     width: 10%;
     gap: 2rem;
     margin-left: 4rem;
-    margin-top: 40vh;
+    /* margin-top: 40vh; */
 }
 .social-icon {
     font-size: 1.5rem;
@@ -104,10 +104,10 @@ button:hover {
 .home {
     height: 90vh;
     display: flex;
+    align-items: center;
 }
 .home-text {
     width: 36%;
-    margin-top: 30vh;
 }
 .home p {
     margin-top: 1rem;
@@ -145,7 +145,19 @@ button:hover {
 }
 
 /* for medium devices */
+@media screen and (max-width: 1400px) {
+    .home-text {
+        width: 50%;
+    }
+    h1 {
+        font-size: xx-large;
+    }
+}
 @media screen and (max-width: 1024px) {
+    h1 {
+        font-size: x-large;
+    }
+
 }
 
 /* for small devices */
