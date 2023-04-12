@@ -58,7 +58,7 @@ img {
     height: 100%;
 }
 .section {
-    height: 100vh;
+    /* height: 100vh; */
     padding: 4rem 0 1rem;
     text-align: center;
 }
@@ -254,7 +254,7 @@ img {
 #kunskaper {
     /* height: 100vh; */
     padding-block: 5rem;
-
+    
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -270,3 +270,93 @@ img {
     height: 50vh;
     position: relative;
 }
+
+
+
+
+
+/* ------------------------------footer--------------------------------- */
+.footer {
+    margin-block: 5rem;
+    border-top: 2px solid var(--clr-blue);
+    padding-top: 2rem;
+    text-align: center;
+}
+/* .contact-info {
+    margin-top: 1rem;
+} */
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+.footer-right-section a {
+    padding: .5rem;
+}
+.footer-right-section a:hover {
+    color: var(--clr-blue);
+}
+
+/* for big devices */
+@media screen and (min-width: 1024px) {
+    .footer {
+        padding-top: 5rem;
+
+        grid-template-columns: 1fr 400px .5fr;
+        align-items: center;
+        gap: 0;
+    }
+    .footer-center-section {
+        text-align: start;
+    }
+    .contact-info {
+        justify-content: left;
+    }
+    .footer-right-section {
+        display: grid;
+    }
+}
+
+
+
+
+/* FOOTERS COPY MESSAGE */
+.btn-copy {
+    padding: .5rem 0;
+    position: relative;
+    display: inline-block;
+}
+.btn-copy:hover {
+    cursor: pointer;
+}
+.hover-btn-msg {
+    display: none;
+    position: absolute;
+    background-color: var(--clr-blue);
+    bottom: -2rem;
+    right: -4rem;
+    padding: .2rem .5rem;
+    border-radius: .2rem;
+    color: white;
+}
+.hover-btn-msg:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 5px solid var(--clr-blue);
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid var(--clr-blue);
+    border-top: 5px solid transparent;
+    left: 10px;
+    top: -10px;
+}
+.btn-copy:hover .hover-btn-msg {
+    display: block;
+}
+
+
+
+

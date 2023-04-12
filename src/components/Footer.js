@@ -15,12 +15,12 @@ const Footer = ({ english }) => {
     };
 
     return (
-        <div className='footer' id='kontakta-mig'>
-            <div className="left">
+        <div className='footer grid' id='kontakta-mig'>
+            <div className="footer-left-section">
                 <h1 className='blue'>Sara Öhman</h1>
                 <h2>{english === true ? 'Frontend Developer' : 'Frontendutvecklare'}</h2>
             </div>
-            <div className='center'>
+            <div className='footer-center-section'>
 
                 <h3>{english === true ? 'Contact me' : 'Kontakta mig'}</h3>
                 <p>{english === true ? 'Interested in hiring me? Want to brainstorm ideas? Get in touch! I love making new contacts.' : 'Intresserad av att anställa mig? Vill du bolla idéer? Hör av dig! Jag älskar att skaffa nya kontakter.'}</p>
@@ -35,7 +35,7 @@ const Footer = ({ english }) => {
                     </div>
                 </div>
             </div>
-            <div className="right">
+            <div className="footer-right-section">
                 <a href="https://www.linkedin.com/in/sara-%C3%B6hman-0b7aa2116/" ><FaLinkedinIn size='1.5rem' /></a>
                 <a href="https://github.com/saraohman97"><GrGithub size='1.5rem' /></a>
                 <a href="https://www.facebook.com/sara.ohman.3/"><GrFacebookOption size='1.5rem' /></a>
