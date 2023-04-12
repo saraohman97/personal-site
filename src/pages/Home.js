@@ -17,7 +17,7 @@ const Home = ({ english }) => {
       </div>
 
       <div className="home-text">
-        <h1>{english === true ? 'Hi. I am Sara.' : 'Hej. Jag är Sara.'} <br /> {english === true ? 'A Frontend developer.' : 'En Frontendutvecklare.'}</h1>
+        <h1>{english === true ? 'Hi, I am Sara.' : 'Hej, jag är Sara.'} <br /> {english === true ? 'Frontend developer.' : 'Frontendutvecklare.'}</h1>
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam corrupti, omnis fugit dolor dolores, dolorem laboriosam ex odio iste est.</p>
         <Link to='#portfölj'><button>{english === true ? 'Check out projects' : 'Kolla in projekt'}</button></Link>
