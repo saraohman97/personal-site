@@ -7,8 +7,8 @@ const LanguageModal = ({ setEnglish, english }) => {
     <div className='language-modal'>
       {english === true ? (
         <div className='language-option' onClick={() => setEnglish(false)}>
-            <img src={sweden} alt="" />
-            <p>Svenska</p>
+          <img src={sweden} alt="" />
+          <p>Svenska</p>
         </div>
       ) : (
         // <div className="line"></div>
@@ -16,9 +16,9 @@ const LanguageModal = ({ setEnglish, english }) => {
           <img src={england} alt="" />
           <p>English</p>
         </div>
-  )
-}
-  </div>
+      )
+      }
+    </div>
   )
 }
 

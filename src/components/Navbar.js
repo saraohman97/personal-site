@@ -8,6 +8,8 @@ import { FaReact } from "react-icons/fa";
 import { AiOutlinePicture } from "react-icons/ai";
 import { TiContacts } from "react-icons/ti";
 import { useState } from "react";
+import sweden from '../assets/sweden.png'
+import england from '../assets/england.png'
 
 
 const Navbar = ({ setEnglish, english }) => {
@@ -27,8 +29,20 @@ const Navbar = ({ setEnglish, english }) => {
                 <NavLink to='#portfölj' >{english === true ? 'Project portfolio' : 'Projekt portfölj'}</NavLink>
                 <NavLink to='#kontakta-mig'>{english === true ? 'Contact me' : 'Kontakta mig'}</NavLink>
                 <div className='nav-icons'>
-                    <div className='nav-icon dropdown-globe'><BsGlobe2 /><LanguageModal english={english} setEnglish={setEnglish} /></div>
-                    <div className='nav-icon dropdown-music'><HiMusicNote /><MusicModal /></div>
+                    {/* <div className='nav-icon dropdown-globe'><BsGlobe2 /><LanguageModal english={english} setEnglish={setEnglish} /></div> */}
+                    <div className="nav-icon">
+                        {english === true ? (
+                            <div className='language-option' onClick={() => setEnglish(false)}>
+                                <img src={sweden} alt="" />
+                            </div>
+                        ) : (
+                            <div className='language-option' onClick={() => setEnglish(true)}>
+                                <img src={england} alt="" />
+                            </div>
+                        )}
+                    </div>
+
+                    {/* <div className='nav-icon dropdown-music'><HiMusicNote /><MusicModal /></div> */}
                 </div>
             </div>
 
@@ -40,7 +54,19 @@ const Navbar = ({ setEnglish, english }) => {
                     <NavLink to='#kontakta-mig' onClick={toggleNav}><TiContacts />{english === true ? 'Contact me' : 'Kontakta mig'}</NavLink>
                 </div>
                 <div className="nav-menu">
-                    <p>SARA</p>
+                    {/* <p>SARA</p> */}
+                    <div className="menu-icon">
+                        {english === true ? (
+                            <div className='language-option' onClick={() => setEnglish(false)}>
+                                <img src={sweden} alt="" />
+                            </div>
+                        ) : (
+                            <div className='language-option' onClick={() => setEnglish(true)}>
+                                <img src={england} alt="" />
+                            </div>
+                        )}
+                    </div>
+
                     <div onClick={toggleNav} className='btn-show'>{closeNav === true ? 'X' : '+'}</div>
                 </div>
             </div>

@@ -19,8 +19,8 @@ function App() {
 
       <Home english={english} />
       <About english={english} />
-      {/* <Skills english={english} /> */}
-      {/* <Portfolio english={english} /> */}
+      <Skills english={english} />
+      <Portfolio english={english} />
 
       <Footer english={english} />
       <ScrollButton />

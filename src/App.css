@@ -58,13 +58,13 @@ img {
     height: 100%;
 }
 .section {
-    /* height: 100vh; */
     padding: 4rem 0 1rem;
     text-align: center;
 }
 .section-subtitle {
     margin-bottom: 2rem;
 }
+
 .grid {
     display: grid;
     gap: 1.5rem;
@@ -251,24 +251,11 @@ img {
 
 
 /* ------------------------------skills--------------------------------- */
-#kunskaper {
-    /* height: 100vh; */
-    padding-block: 5rem;
-    
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-#kunskaper .bg {
-    width: 100%;
-    margin-top: 4rem;
-    
-    background-image: url('./assets/skills/birds-icons.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 50vh;
-    position: relative;
+@media screen and (min-width: 568px) {
+    #kunskaper {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
 }
 
 
@@ -280,15 +267,12 @@ img {
     margin-block: 5rem;
     border-top: 2px solid var(--clr-blue);
     padding-top: 2rem;
-    text-align: center;
+    text-align: left;
 }
-/* .contact-info {
-    margin-top: 1rem;
-} */
 .contact-info {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     gap: 3rem;
     margin-top: 2rem;
 }
@@ -307,6 +291,7 @@ img {
         grid-template-columns: 1fr 400px .5fr;
         align-items: center;
         gap: 0;
+        text-align: center;
     }
     .footer-center-section {
         text-align: start;
@@ -356,7 +341,6 @@ img {
 .btn-copy:hover .hover-btn-msg {
     display: block;
 }
-
 
 
 
