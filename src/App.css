@@ -28,11 +28,7 @@ h1 {
 }
 p {
     line-height: 22px;
-}
-.df {
-    display: flex;
-    align-items: center;
-    gap: 5rem;
+    color: rgb(42, 42, 42);
 }
 button {
     padding: .8rem 3.5rem;
@@ -60,6 +56,18 @@ button:hover {
 img {
     width: 100%;
     height: 100%;
+}
+.section {
+    height: 100vh;
+    padding: 4rem 0 1rem;
+    text-align: center;
+}
+.section-subtitle {
+    margin-bottom: 2rem;
+}
+.grid {
+    display: grid;
+    gap: 1.5rem;
 }
 
 
@@ -104,6 +112,7 @@ img {
 
     padding-top: 3.5rem;
     align-items: center;
+    margin-bottom: 4rem;
 }
 .home-text {
     grid-column: 1/3;
@@ -117,10 +126,11 @@ img {
     display: none;
 }
 
-.home-img {
+.home-img, 
+.about-img {
     max-width: 300px;
 }
-.home .mask {
+.mask {
     mask-image: url('./assets/mask-3.png');
     mask-size: contain;
     mask-position: top;
@@ -177,51 +187,46 @@ img {
 
 
 /* ------------------------------about--------------------------------- */
-.about {
-    height: 100vh;
-    padding-top: 5rem;
-
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.about-img {
+    max-width: 300px;
+    align-self: center;
+    justify-self: center;
 }
 .about-text {
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 5rem;
+    align-self: center;
+}
+.about-desc {
+    margin-bottom: 2.5rem;
 }
 .number-display {
     display: flex;
-    align-items: flex-start;
     justify-content: space-between;
-    gap: 1rem;
-    width: 100%;
-    margin-bottom: 2rem;
-}
-.number-display-item {
-    width: 9rem;
-    text-align: center;
-}
-.number-display p {
-    font-weight: 600;
-    color: rgb(47, 47, 47);
-}
-.about .mask {
-    mask-image: url('./assets/mask-3.png');
-
-    mask-size: contain;
-    mask-position: top;
-    mask-repeat: no-repeat;
-
-    /* -webkit-mask-size: 100%; */
-    -webkit-mask-image: url('./assets/mask-3.png');
-    -webkit-mask-repeat: no-repeat;
-
-    margin-left: 4rem;
+    gap: .5rem;
+    margin-bottom: 2.5rem;
 }
 
+/* for small devices */
+@media screen and (max-width: 350px) {
+    .number-display p {
+        font-size: small;
+    }
+}
+/* for medium devices */
+@media screen and (min-width: 568px) {
+    .about .grid {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: start;
+    }
+    .number-display {
+        text-align: center;
+    }
+    .about-text {
+        max-width: 500px;
+    }
+    .about-img {
+        max-width: 500px;
+    }
+}
 
 
 
