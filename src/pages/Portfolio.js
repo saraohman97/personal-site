@@ -1,15 +1,47 @@
 import flexiclean from '../assets/flexiclean.png'
 import carelyo from '../assets/carelyo.png'
 import { HiArrowLongRight } from "react-icons/hi2"
-import Carousel, { CarouselItem } from '../components/Carousel'
+// import Carousel, { CarouselItem } from '../components/Carousel'
 
 const Portfolio = ({ english }) => {
   return (
-    <div id='portfölj'>
+    <div id='portfölj' className='section'>
       <h1>{english === true ? 'Portfolio' : 'Portfölj'}</h1>
-      <p>{english === true ? 'Most recent work' : 'Mest nyligen arbeten'}</p>
+      <p className='section-subtitle'>{english === true ? 'Most recent work' : 'Mest nyligen arbeten'}</p>
 
-      <Carousel>
+      <div className="portfolio-wrapper">
+        <div className="portfolio-card">
+          <img src={flexiclean} alt="" />
+
+          <div className="portfolio-text">
+            <h3>FlexiClean</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quo unde voluptatem eveniet, sapiente quae ipsum nulla autem temporibus illo placeat ab incidunt sequi earum pariatur consequuntur eos maxime adipisci?</p>
+            <div className="knowledge-info">
+              <div className="knowledge-patch">CSS</div>
+              <div className="knowledge-patch">React</div>
+              <div className="knowledge-patch">Mantine</div>
+            </div>
+            <button>Demo <HiArrowLongRight /> </button>
+          </div>
+        </div>
+
+        <div className="portfolio-card">
+          <img src={carelyo} alt="" />
+
+          <div className="portfolio-text">
+            <h3>FlexiClean</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quo unde voluptatem eveniet, sapiente quae ipsum nulla autem temporibus illo placeat ab incidunt sequi earum pariatur consequuntur eos maxime adipisci?</p>
+            <div className="knowledge-info">
+              <div className="knowledge-patch">CSS</div>
+              <div className="knowledge-patch">React</div>
+              <div className="knowledge-patch">Mantine</div>
+            </div>
+            <button>Demo <HiArrowLongRight /> </button>
+          </div>
+        </div>
+      </div>
+
+      {/* <Carousel>
         <CarouselItem>
           <img src={flexiclean} alt="" />
 
@@ -28,7 +60,7 @@ const Portfolio = ({ english }) => {
             <button>Demo <HiArrowLongRight /></button>
           </div>
         </CarouselItem>
-      </Carousel>
+      </Carousel> */}
 
     </div>
   )
