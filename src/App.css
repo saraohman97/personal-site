@@ -1,16 +1,24 @@
 
 :root {
-    --clr-blue: #7BA3ED;
+    --clr-main: #7BA3ED;
+    --clr-hover-main: #427fef;
     --bg: white;
+    --bg-second: white;
+    --clr-text: rgb(42, 42, 42);
 }
 
 /* variables dark theme */
 [data-theme="dark"] {
-    --clr-blue: pink;
-    --bg: rgb(33, 33, 33);
+    --bg: rgb(42, 42, 42);
+    --bg-second: black;
+    --clr-text: white;
 }
 .checkbox {
     position: relative;
+    color: var(--clr-text);
+}
+.checkbox:hover{
+    color: var(--clr-main);
 }
 input[type="checkbox"] {
     position: absolute;
@@ -19,26 +27,25 @@ input[type="checkbox"] {
     appearance: none;
     outline: none;
 }
-.checkbox:hover .sun,
-.checkbox:hover .moon {
-    color: var(--clr-blue);
-}
-
 [data-theme="dark"] .sun,
 [data-theme="light"] .moon {
-    display: none;
+    display: block;
 }
 [data-theme="dark"] .moon,
 [data-theme="light"] .sun {
-    display: block;
+    display: none;
 }
+.sun {
+    display: none;
+}
+
 
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in;
 }
 html, body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -51,22 +58,21 @@ html, body {
     width: 90%;
     margin: 0 auto;
 }
-
-
-
-
-
 a {
     text-decoration: none;
-    color: black;
-    transition: .3s;
+    color: var(--clr-text);
 }
 h1 {
     font-size: x-large;
+    color: var(--clr-text);
+}
+h3,
+h2 {
+    color: var(--clr-text);
 }
 p {
     line-height: 22px;
-    color: rgb(42, 42, 42);
+    color: var(--clr-text);
 }
 button {
     padding: .8rem 3.5rem;
@@ -74,22 +80,22 @@ button {
 
     border-radius: 5px;
     cursor: pointer;
-    background-color: var(--clr-blue);
-    border: 2px solid var(--clr-blue);
-    color: white;
+    background-color: var(--clr-main);
+    border: 2px solid var(--clr-main);
+    color: var(--clr-opposite);
 
     display: flex;
     align-items: center;
     gap: 1rem;
-    transition: .3s;
 }
 button:hover {
-    background-color: white;
-    border: 2px solid var(--clr-blue);
-    color: var(--clr-blue);
+    background-color: var(--clr-opposite);
+    border: 2px solid var(--clr-main);
+    color: var(--clr-main);
 }
+/* -------------------------------------------Change name. Am I using it? */
 .blue {
-    color: var(--clr-blue);
+    color: var(--clr-main);
 }
 img {
     width: 100%;
@@ -115,15 +121,162 @@ img {
     position: fixed;
     right: 40px;
     bottom: 80px;
-    color: var(--clr-blue);
+    color: var(--clr-main);
     cursor: pointer;
     transition: .3s;
-    background-color: white;
+    background-color: var(--clr-opposite);
     border-radius: .5rem;
 }
 .btn-scroll:hover {
-    color: #427fef;
+    color: var(--clr-hover-main);
 }
+
+
+
+
+
+
+
+
+/* ------------------------------navbar--------------------------------- */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    
+    height: 10vh;
+}
+.navbar a {
+    padding: .5rem 1rem;
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--clr-text);
+}
+.navbar a:hover {
+    color: var(--clr-main);
+}
+.nav-icons {
+    padding-left: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.nav-icon {
+    margin: 0 .5rem;
+    cursor: pointer;
+    font-size: x-large;
+}
+.nav-icon:hover {
+    color: var(--clr-main);
+}
+
+.navbar-mobile {
+    display: none;
+    /* heeeerree */
+    background-color: var(--bg);
+}
+
+.menu-icons {
+    display: flex;
+    align-items: center;
+}
+
+.language-option {
+    padding-inline: 1rem;
+}
+.language-option img {
+    width: 25px;
+    height: 25px;
+}
+
+/* for medium devices */
+@media screen and (max-width: 1024px) {
+    .navbar a {
+        margin: 0;
+    }
+    .nav-icons {
+        padding-left: 0rem;
+    }
+}
+
+/* for small devices */
+@media screen and (max-width: 700px) {
+    .navbar {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: block;
+    }
+    .nav-menu {
+        /* ------------------------------------might need to be another bg color */
+        background-color: var(--bg-second);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+    .btn-show {
+        padding: 1rem;
+        font-size: larger;
+        color: var(--clr-text);
+    }
+    .btn-show:hover {
+        color: var(--clr-main);
+        cursor: pointer;
+    }
+    
+    
+    .nav-links {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        padding: 3rem;
+        width: 100%;
+        box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+    
+
+        /* --------------------------------------------change color in root */
+        background-color: var(--bg-second);
+        position: fixed;
+        bottom: 50px;
+        left: 0;
+        z-index: 3;
+        height: fit-content;
+        width: 100%;
+    }
+    .nav-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        gap: .5rem;
+        text-align: center;
+    }
+    .nav-links a:hover {
+        color: var(--clr-main);
+    }
+
+
+    .show-menu {
+        display: none;
+    }
+}
+
+
+
 
 
 
@@ -139,7 +292,7 @@ img {
     font-size: 1.5rem;
 }
 .social-icon:hover {
-    color: var(--clr-blue);
+    color: var(--clr-main);
 }
 
 
@@ -204,7 +357,7 @@ img {
         gap: 10px;
         position: absolute;
         bottom: 2rem;
-        transition: .3s;
+        /* transition: .3s; */
     }
     .scroll-text:hover {
         transform: translateY(.5rem);
@@ -284,6 +437,7 @@ img {
 }
 .portfolio-card img {
     height: auto;
+    /* --------------------------------------------------does box-shadow need a root? */
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.323);
     border-radius: .5rem;
 }
@@ -297,13 +451,13 @@ img {
     margin-block: 1rem;
 }
 .knowledge-patch {
-    background-color: #7BA3ED;
-    color: white;
+    background-color: var(--clr-main);
+    color: var(--clr-opposite);
     padding: 5px 10px;
     border-radius: .3rem;
 }
 .knowledge-patch:hover {
-    background-color: #427fef;
+    background-color: var(--clr-hover-main);
     cursor: default;
 }
 
@@ -350,7 +504,7 @@ img {
 /* ------------------------------footer--------------------------------- */
 .footer {
     margin-block: 5rem;
-    border-top: 2px solid var(--clr-blue);
+    border-top: 2px solid var(--clr-main);
     padding-top: 2rem;
     text-align: left;
 }
@@ -365,7 +519,7 @@ img {
     padding: .5rem;
 }
 .footer-right-section a:hover {
-    color: var(--clr-blue);
+    color: var(--clr-main);
 }
 
 /* for big devices */
@@ -404,21 +558,21 @@ img {
 .hover-btn-msg {
     display: none;
     position: absolute;
-    background-color: var(--clr-blue);
+    background-color: var(--clr-main);
     bottom: -2rem;
     right: -4rem;
     padding: .2rem .5rem;
     border-radius: .2rem;
-    color: white;
+    color: var(--clr-opposite);
 }
 .hover-btn-msg:before {
     content: "";
     width: 0px;
     height: 0px;
     position: absolute;
-    border-left: 5px solid var(--clr-blue);
+    border-left: 5px solid var(--clr-main);
     border-right: 12px solid transparent;
-    border-bottom: 12px solid var(--clr-blue);
+    border-bottom: 12px solid var(--clr-main);
     border-top: 5px solid transparent;
     left: 10px;
     top: -10px;
@@ -426,6 +580,12 @@ img {
 .btn-copy:hover .hover-btn-msg {
     display: block;
 }
+
+
+
+
+
+
 
 
 

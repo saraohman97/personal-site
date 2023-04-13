@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import './Css/Navbar.css'
+// import './Css/Navbar.css'
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import Navbar from './components/Navbar'

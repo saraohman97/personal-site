@@ -79,7 +79,15 @@ const Navbar = ({ setEnglish, english, toggleTheme }) => {
                             )}
                         </div>
 
-                        <div className="btn-show"><BsMoon /></div>
+                        <div className='checkbox'>
+                        <input type="checkbox" onClick={toggleTheme} />
+                        <div className="sun">
+                            <BsSun size='1.5rem' />
+                        </div>
+                        <div className="moon">
+                            <BsMoon size='1.5rem' />
+                        </div>
+                    </div>
                     </div>
 
 
