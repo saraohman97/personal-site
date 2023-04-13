@@ -142,9 +142,9 @@
     padding-left: 5rem;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 .nav-icon {
-    padding: .5rem 1rem;
     margin: 0 .5rem;
     cursor: pointer;
     font-size: x-large;
@@ -159,7 +159,7 @@
 
 .menu-icons {
     display: flex;
-
+    align-items: center;
 }
 
 
@@ -203,6 +203,7 @@
     }
     .btn-show {
         padding: 1rem;
+        font-size: larger;
     }
     .btn-show:hover {
         color: var(--clr-blue);
