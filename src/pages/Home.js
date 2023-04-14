@@ -1,14 +1,20 @@
 import React from 'react'
-import SocialIcons from '../components/SocialIcons'
 import { HiArrowLongDown } from "react-icons/hi2"
 import self from '../assets/self-2.png'
 import { BsFillMouse2Fill } from "react-icons/bs"
 import { NavHashLink as Link } from 'react-router-hash-link'
+import { FaLinkedinIn } from 'react-icons/fa'
+import { GrFacebookOption } from "react-icons/gr"
+import { GrGithub } from "react-icons/gr"
 
 const Home = ({ english }) => {
   return (
     <div className='home'>
-      <SocialIcons />
+      <div className='social-icons'>
+        <a href="https://www.linkedin.com/in/sara-%C3%B6hman-0b7aa2116/" className='social-icon'><FaLinkedinIn /></a>
+        <a href="https://github.com/saraohman97" className='social-icon'><GrGithub /></a>
+        <a href="https://www.facebook.com/sara.ohman.3/" className='social-icon'><GrFacebookOption /></a>
+      </div>
 
       <div className="home-img">
         <div className='mask'>

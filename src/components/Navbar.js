@@ -1,13 +1,10 @@
-// import { BsGlobe2 } from "react-icons/bs";
-// import { HiMusicNote } from "react-icons/hi";
-// import LanguageModal from './modals/LanguageModal';
-// import MusicModal from './modals/MusicModal';
+import { useState } from "react";
 import { NavHashLink as NavLink } from 'react-router-hash-link'
+
 import { AiOutlineUser } from "react-icons/ai";
 import { FaReact } from "react-icons/fa";
 import { AiOutlinePicture } from "react-icons/ai";
 import { TiContacts } from "react-icons/ti";
-import { useState } from "react";
 import sweden from '../assets/sweden.png'
 import england from '../assets/england.png'
 import { BsMoon } from "react-icons/bs";
@@ -79,14 +76,14 @@ const Navbar = ({ setEnglish, english, toggleTheme }) => {
                         </div>
 
                         <div className='checkbox'>
-                        <input type="checkbox" onClick={toggleTheme} />
-                        <div className="sun">
-                            <BsSun size='1.5rem' />
+                            <input type="checkbox" onClick={toggleTheme} />
+                            <div className="sun">
+                                <BsSun size='1.5rem' />
+                            </div>
+                            <div className="moon">
+                                <BsMoon size='1.5rem' />
+                            </div>
                         </div>
-                        <div className="moon">
-                            <BsMoon size='1.5rem' />
-                        </div>
-                    </div>
                     </div>
 
 

@@ -1,4 +1,3 @@
-// import birdImg from '../assets/birds-icons.png'
 import css from '../assets/skills/css.webp'
 import html from '../assets/skills/html.webp'
 import js from '../assets/skills/javascript.png'
@@ -20,7 +19,6 @@ const Skills = ({ english }) => {
         <img src={mantine} alt="" />
         <img src={js} alt="" />
       </div>
-      {/* <img src={birdImg} alt="" /> */}
     </div>
   )
 }

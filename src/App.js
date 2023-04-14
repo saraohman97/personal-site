@@ -1,12 +1,11 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
-// import './Css/Navbar.css'
-import Home from './pages/Home';
-import Portfolio from './pages/Portfolio';
 import Navbar from './components/Navbar'
+import Home from './pages/Home';
 import About from './pages/About';
-import Footer from './components/Footer';
 import Skills from './pages/Skills'
+import Portfolio from './pages/Portfolio';
+import Footer from './components/Footer';
 import ScrollButton from './components/ScrollButton';
 
 function App() {
@@ -19,7 +18,7 @@ function App() {
     document.querySelector("body").setAttribute('data-theme', 'light')
   }
   const toggleTheme = (e) => {
-    if(e.target.checked) setDarkMode();
+    if (e.target.checked) setDarkMode();
     else setLightMode()
   }
 
