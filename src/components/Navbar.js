@@ -32,7 +32,7 @@ const Navbar = ({ setEnglish, english, toggleTheme }) => {
                 <NavLink to='#portfölj' >{english === true ? 'Project portfolio' : 'Projekt portfölj'}</NavLink>
                 <NavLink to='#kontakta-mig'>{english === true ? 'Contact me' : 'Kontakta mig'}</NavLink>
                 <div className='nav-icons'>
-                    <div className="nav-icon">
+                    <div>
                         {english === true ? (
                             <div className='language-option' onClick={() => setEnglish(false)}>
                                 <img src={sweden} alt="" />
@@ -53,7 +53,6 @@ const Navbar = ({ setEnglish, english, toggleTheme }) => {
                             <BsMoon size='1.5rem' />
                         </div>
                     </div>
-
 
                 </div>
             </div>

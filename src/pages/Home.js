@@ -19,7 +19,7 @@ const Home = ({ english }) => {
       <div className="home-text">
         <h1>{english === true ? 'Hi, I am Sara.' : 'Hej, jag är Sara.'} <br /> {english === true ? 'Frontend developer.' : 'Frontendutvecklare.'}</h1>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam corrupti, omnis fugit dolor dolores, dolorem laboriosam ex odio iste est.</p>
+        <p>Jag tar examen i juni och letar trevlig och ambitiös arbetsplats redan nu. Jag praktiserade på företaget Swedcon18 och arbetade huvudsakligen på en digital vårdplattform. </p>
         <Link to='#portfölj'><button>{english === true ? 'Check out projects' : 'Kolla in projekt'}</button></Link>
 
         <Link to='#om-mig' className="scroll-text">

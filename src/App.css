@@ -5,20 +5,24 @@
     --bg: white;
     --bg-second: white;
     --clr-text: rgb(42, 42, 42);
+    --box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* variables dark theme */
 [data-theme="dark"] {
     --bg: rgb(42, 42, 42);
-    --bg-second: black;
+    --bg-second: rgb(42, 42, 42);
     --clr-text: white;
+    --box-shadow: 3px 5px 10px rgba(255, 255, 255, 0.3);
 }
 .checkbox {
     position: relative;
     color: var(--clr-text);
+    transition: all 0.2s ease-in;
 }
 .checkbox:hover{
     color: var(--clr-main);
+    transition: all 0.2s ease-in;
 }
 input[type="checkbox"] {
     position: absolute;
@@ -26,6 +30,9 @@ input[type="checkbox"] {
     height: 40px;
     appearance: none;
     outline: none;
+}
+input[type="checkbox"]:hover {
+    cursor: pointer;
 }
 [data-theme="dark"] .sun,
 [data-theme="light"] .moon {
@@ -45,7 +52,7 @@ input[type="checkbox"] {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all 0.2s ease-in;
+    /* transition: all 0.2s ease-in; */
 }
 html, body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -79,19 +86,20 @@ button {
     font-size: large;
 
     border-radius: 5px;
-    cursor: pointer;
     background-color: var(--clr-main);
     border: 2px solid var(--clr-main);
-    color: var(--clr-opposite);
-
+    color: var(--bg);
+    
     display: flex;
     align-items: center;
     gap: 1rem;
+    transition: all 0.2s ease-in;
 }
 button:hover {
-    background-color: var(--clr-opposite);
+    background-color: var(--bg);
     border: 2px solid var(--clr-main);
     color: var(--clr-main);
+    cursor: pointer;
 }
 /* -------------------------------------------Change name. Am I using it? */
 .blue {
@@ -122,13 +130,14 @@ img {
     right: 40px;
     bottom: 80px;
     color: var(--clr-main);
-    cursor: pointer;
     transition: .3s;
-    background-color: var(--clr-opposite);
+    background-color: var(--bg);
     border-radius: .5rem;
+    transition: all .2s ease-in;
 }
 .btn-scroll:hover {
     color: var(--clr-hover-main);
+    cursor: pointer;
 }
 
 
@@ -152,6 +161,7 @@ img {
     margin: 0 1rem;
     text-decoration: none;
     color: var(--clr-text);
+    transition: all 0.2s ease-in;
 }
 .navbar a:hover {
     color: var(--clr-main);
@@ -162,18 +172,9 @@ img {
     flex-direction: row;
     align-items: center;
 }
-.nav-icon {
-    margin: 0 .5rem;
-    cursor: pointer;
-    font-size: x-large;
-}
-.nav-icon:hover {
-    color: var(--clr-main);
-}
 
 .navbar-mobile {
     display: none;
-    /* heeeerree */
     background-color: var(--bg);
 }
 
@@ -184,6 +185,9 @@ img {
 
 .language-option {
     padding-inline: 1rem;
+}
+.language-option:hover {
+    cursor: pointer;
 }
 .language-option img {
     width: 25px;
@@ -221,7 +225,7 @@ img {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: var(--box-shadow);
     }
     .btn-show {
         padding: 1rem;
@@ -242,7 +246,7 @@ img {
         gap: 3rem;
         padding: 3rem;
         width: 100%;
-        box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: var(--box-shadow);
     
 
         /* --------------------------------------------change color in root */
@@ -290,6 +294,7 @@ img {
 }
 .social-icon {
     font-size: 1.5rem;
+    transition: all .2s ease-in;
 }
 .social-icon:hover {
     color: var(--clr-main);
@@ -317,6 +322,7 @@ img {
 
 .scroll-text {
     display: none;
+    transition: all .2s ease-in;
 }
 
 .home-img,
@@ -437,13 +443,15 @@ img {
 }
 .portfolio-card img {
     height: auto;
-    /* --------------------------------------------------does box-shadow need a root? */
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.323);
+    box-shadow: var(--box-shadow);
     border-radius: .5rem;
 }
 .portfolio-text {
     text-align: start;
     padding-inline: 1rem;
+}
+.portfolio-text p {
+    padding-bottom: 1rem;
 }
 .knowledge-info {
     display: flex;
@@ -452,9 +460,10 @@ img {
 }
 .knowledge-patch {
     background-color: var(--clr-main);
-    color: var(--clr-opposite);
+    color: var(--bg);
     padding: 5px 10px;
     border-radius: .3rem;
+    transition: all .2s ease-in;
 }
 .knowledge-patch:hover {
     background-color: var(--clr-hover-main);
@@ -517,6 +526,7 @@ img {
 }
 .footer-right-section a {
     padding: .5rem;
+    transition: all .2s ease-in;
 }
 .footer-right-section a:hover {
     color: var(--clr-main);
@@ -563,7 +573,7 @@ img {
     right: -4rem;
     padding: .2rem .5rem;
     border-radius: .2rem;
-    color: var(--clr-opposite);
+    color: var(--bg);
 }
 .hover-btn-msg:before {
     content: "";
@@ -579,6 +589,7 @@ img {
 }
 .btn-copy:hover .hover-btn-msg {
     display: block;
+
 }
 
 

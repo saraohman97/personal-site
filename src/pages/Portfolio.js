@@ -1,6 +1,6 @@
 import flexiclean from '../assets/flexiclean.png'
 import carelyo from '../assets/carelyo.png'
-// import { HiArrowLongRight } from "react-icons/hi2"
+import { HiArrowLongRight } from "react-icons/hi2"
 
 const Portfolio = ({ english }) => {
   return (
@@ -19,8 +19,9 @@ const Portfolio = ({ english }) => {
               <div className="knowledge-patch">Mantine</div>
             </div>
             <h3>FlexiClean</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quo unde voluptatem eveniet, sapiente quae ipsum nulla autem temporibus illo placeat ab incidunt sequi earum pariatur consequuntur eos maxime adipisci?</p>
-            {/* <button>Demo <HiArrowLongRight /> </button> */}
+            <p>FlexiClean är en ﬁlterhållare för rening av process- och dag-vatten. 
+Företaget behövde en uppdatering på sin hemsida med ytterligare funktionalitet. <span className='blue'>Applikationen är inte än launchad.</span></p>
+            <button>Demo <HiArrowLongRight /> </button>
           </div>
         </div>
 
@@ -33,9 +34,9 @@ const Portfolio = ({ english }) => {
               <div className="knowledge-patch">React</div>
               <div className="knowledge-patch">Mantine</div>
             </div>
-            <h3>FlexiClean</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quo unde voluptatem eveniet, sapiente quae ipsum nulla autem temporibus illo placeat ab incidunt sequi earum pariatur consequuntur eos maxime adipisci?</p>
-            {/* <button>Demo <HiArrowLongRight /> </button> */}
+            <h3>Carelyo</h3>
+            <p>Swedcon18 verksammas med mjukvaruutvecklingsaktiviteter och IT-konsultation. Swedcon18 håller just nu på att bygga en digital vårdplattform. Jag hjälpte med applikationen i 3 månader under LIA (praktik). <span className='blue'>Applikationen är inte än launchad.</span> </p>
+            <button>Demo <HiArrowLongRight /> </button>
           </div>
         </div>
       </div>
