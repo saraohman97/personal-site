@@ -14,13 +14,11 @@ const Portfolio = ({ english }) => {
 
           <div className="portfolio-text">
             <div className="knowledge-info">
-              <div className="knowledge-patch">CSS</div>
               <div className="knowledge-patch">React</div>
               <div className="knowledge-patch">Mantine</div>
             </div>
             <h3>FlexiClean</h3>
-            <p>FlexiClean är en ﬁlterhållare för rening av process- och dag-vatten.
-              Företaget behövde en uppdatering på sin hemsida med ytterligare funktionalitet. </p>
+            <p>{english === true ? 'FlexiClean is a ﬁlter holder for cleaning process and day water. The company needed an update on its website with additional functionality.' : 'FlexiClean är en ﬁlterhållare för rening av process- och dag-vatten. Företaget behövde en uppdatering på sin hemsida med ytterligare funktionalitet.'}</p>
             {/* <span className='blue'>Applikationen är inte än launchad.</span>
             <a href="https://www.flexiclean.eu/"><button>Demo <HiArrowLongRight /></button></a> */}
           </div>
@@ -31,12 +29,12 @@ const Portfolio = ({ english }) => {
 
           <div className="portfolio-text">
             <div className="knowledge-info">
-              <div className="knowledge-patch">CSS</div>
-              <div className="knowledge-patch">React</div>
               <div className="knowledge-patch">Mantine</div>
+              <div className="knowledge-patch">React</div>
+              <div className="knowledge-patch">Typescript</div>
             </div>
             <h3>Carelyo</h3>
-            <p>Swedcon18 verksammas med mjukvaruutvecklingsaktiviteter och IT-konsultation. Swedcon18 håller just nu på att bygga en digital vårdplattform. Jag hjälpte med applikationen i 3 månader under LIA (praktik). </p>
+            <p>{english === true ? 'Swedcon18 operates with software development activities and IT consulting. Swedcon18 is currently building a digital healthcare platform. I helped with the application for 3 months during LIA (Learning At Work).' : 'Swedcon18 verksammas med mjukvaruutvecklingsaktiviteter och IT-konsultation. Swedcon18 håller just nu på att bygga en digital vårdplattform. Jag hjälpte med applikationen i 3 månader under LIA (praktik). '}</p>
             {/* <span className='blue'>Applikationen är inte än launchad.</span>
             <a href="https://www.carelyo.ng/"><button>Demo <HiArrowLongRight /></button></a> */}
           </div>

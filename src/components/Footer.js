@@ -22,6 +22,13 @@ const Footer = ({ english }) => {
         }, 2000);
     };
 
+    let message = 
+    (isCopied === true && english === true) ? 'Copied!' 
+    : (isCopied === true && english === false) ? 'Kopierad!' 
+    : (isCopied === false && english === true) ? 'Copy text' 
+    : (isCopied === false && english === false) ? 'Kopiera text' 
+    : null;
+
     return (
         <div className='footer grid' id='kontakta-mig'>
             <div className="footer-left-section">
@@ -34,11 +41,13 @@ const Footer = ({ english }) => {
                 <div className='contact-info'>
                     <div>
                         <h4 className='blue'>{english === true ? 'Mobile' : 'Mobil'}</h4>
-                        <p className='btn-copy' onClick={copyMobile}>070 493 73 54 <span className='hover-btn-msg'>{isCopied ? 'Kopierad!' : 'Kopiera text'}</span></p>
+                        <p className='btn-copy' onClick={copyMobile}>070 493 73 54 <span className='hover-btn-msg'>
+                            {message}
+                        </span></p>
                     </div>
                     <div>
                         <h4 className='blue'>Email</h4>
-                        <p className='btn-copy' onClick={copyEmail}>saraohman97@gmail.com<span className='hover-btn-msg'>{isCopied ? 'Kopierad!' : 'Kopiera text'}</span></p>
+                        <p className='btn-copy' onClick={copyEmail}>saraohman97@gmail.com<span className='hover-btn-msg'>{message}</span></p>
                     </div>
                 </div>
             </div>

@@ -32,16 +32,16 @@ html, body {
 .container {
     width: 90%;
     margin: 0 auto;
+    max-width: 1200px;
 }
 a {
     text-decoration: none;
     color: var(--clr-text);
 }
 p {
-    line-height: 22px;
+    line-height: 26px;
 }
 button {
-    
     background-color: var(--clr-main);
     color: var(--bg);
     border: 2px solid var(--clr-main);
@@ -78,7 +78,9 @@ img {
 .blue {
     color: var(--clr-main);
 }
-
+.link {
+    width: fit-content;
+}
 
 /* ------------------------------dark theme button--------------------------------- */
 .checkbox {
@@ -153,6 +155,7 @@ input[type="checkbox"]:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 1rem;
 }
 .navbar-mobile {
     display: none;
@@ -428,7 +431,6 @@ input[type="checkbox"]:hover {
     cursor: default;
 }
 
-/* @media screen and (min-width: 568px) { */
 @media screen and (min-width: 700px) {
     .portfolio-wrapper {
         grid-template-columns: 1fr 1fr;
@@ -446,10 +448,15 @@ input[type="checkbox"]:hover {
 }
 .skills-wrapper img {
     width: 100%;
-    height: auto;
+    height: 100%;
     max-width: 100px;
 }
-
+@media screen and (max-width: 450px) {
+    .skills-wrapper img {
+        height: 60px;
+        width: auto;
+    }
+}
 @media screen and (min-width: 1000px) {
     #kunskaper {
         margin-top: 5rem;

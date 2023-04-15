@@ -15,7 +15,7 @@ const About = ({ english }) => {
         </div>
 
         <div className="about-text">
-          <p className='about-desc'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam amet quaerat voluptatem porro aut, minus laudantium fugiat ipsam nobis quo magni eius libero ullam praesentium voluptatum nisi consequuntur eaque rem!</p>
+          <p className='about-desc'>{english === true ? 'I mostly work in react web pages with JQuery, useMutations and other hooks. In the near future I would like to switch to Nextjs or vite. With basic knowledge of CRUD methods, I have created web api with MSSQL, MySQL and NoSql.' : 'Jag arbetar oftast i react webbsidor med JQuery, useMutations och andra hooks. I snaraste framtiden skulle jag vilja byta till Nextjs eller vite. Med grundläggande kunskaper i CRUD-metoder så har jag skapat web api med MSSQL, MySQL och NoSql.'}</p>
 
           <div className="number-display">
             <div className="number-display-item">
@@ -36,14 +36,16 @@ const About = ({ english }) => {
 
             <div className="number-display-item">
               <h1 className='blue'>0</h1>
-              {english === true 
-              ? <p>Previous <br /> workplaces</p> 
-              : <p>Tidigare <br /> arbetsplatser</p>
+              {english === true
+                ? <p>Previous <br /> workplaces</p>
+                : <p>Tidigare <br /> arbetsplatser</p>
               }
             </div>
           </div>
 
-          <Link to='/Frontend-utvecklare-cv.pdf' target="_blank" download><button>{english === true ? 'Download CV' : 'Ladda ner CV'}</button></Link>
+          <div className='link'>
+            <Link to='/Frontend-utvecklare-cv.pdf' target="_blank" download><button>{english === true ? 'Download CV' : 'Ladda ner CV'}</button></Link>
+          </div>
         </div>
       </div>
     </div>

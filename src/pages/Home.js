@@ -25,8 +25,10 @@ const Home = ({ english }) => {
       <div className="home-text">
         <h1>{english === true ? 'Hi, I am Sara.' : 'Hej, jag är Sara.'} <br /> {english === true ? 'Frontend developer.' : 'Frontendutvecklare.'}</h1>
 
-        <p>Jag tar examen i juni och letar trevlig och ambitiös arbetsplats redan nu. Jag praktiserade på företaget Swedcon18 och arbetade huvudsakligen på en digital vårdplattform. </p>
-        <Link to='#portfölj'><button>{english === true ? 'Check out projects' : 'Kolla in projekt'}</button></Link>
+        <p>{english === true ? 'I graduate in June and am already looking for a pleasant and ambitious workplace. I did my LIA (Learning At work) at the company Swedcon18 and mainly worked on a digital healthcare platform.' : 'Jag tar examen i juni och letar trevlig och ambitiös arbetsplats redan nu. Jag praktiserade på företaget Swedcon18 och arbetade huvudsakligen på en digital vårdplattform.'}</p>
+        <div className='link'>
+          <Link to='#portfölj'><button>{english === true ? 'Check out projects' : 'Kolla in projekt'}</button></Link>
+        </div>
 
         <Link to='#om-mig' className="scroll-text">
           <BsFillMouse2Fill color='#7BA3ED' size='25px' />
