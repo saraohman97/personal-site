@@ -41,9 +41,7 @@ const Footer = ({ english }) => {
                 <div className='contact-info'>
                     <div>
                         <h4 className='blue'>{english === true ? 'Mobile' : 'Mobil'}</h4>
-                        <p className='btn-copy' onClick={copyMobile}>070 493 73 54 <span className='hover-btn-msg'>
-                            {message}
-                        </span></p>
+                        <p className='btn-copy' onClick={copyMobile}>070 493 73 54 <span className='hover-btn-msg'>{message}</span></p>
                     </div>
                     <div>
                         <h4 className='blue'>Email</h4>

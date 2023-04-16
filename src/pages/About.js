@@ -15,7 +15,7 @@ const About = ({ english }) => {
         </div>
 
         <div className="about-text">
-          <p className='about-desc'>{english === true ? 'I mostly work in react web pages with JQuery, useMutations and other hooks. In the near future I would like to switch to Nextjs or vite. With basic knowledge of CRUD methods, I have created web api with MSSQL, MySQL and NoSql.' : 'Jag arbetar oftast i react webbsidor med JQuery, useMutations och andra hooks. I snaraste framtiden skulle jag vilja byta till Nextjs eller vite. Med grundläggande kunskaper i CRUD-metoder så har jag skapat web api med MSSQL, MySQL och NoSql.'}</p>
+          <p className='about-desc'>{english === true ? 'I mostly work in react web pages with JQuery, useMutations and other hooks. In the near future I would like to switch to Nextjs or vite. With basic knowledge of CRUD methods, I have created web api with MSSQL, MySQL and NoSql.' : 'Jag arbetar oftast i react webbsidor med JQuery, useMutations och andra hooks. I närmaste framtid skulle jag vilja byta till Nextjs eller vite. Med grundläggande kunskaper i CRUD-metoder så har jag skapat web api med MSSQL, MySQL och NoSql.'}</p>
 
           <div className="number-display">
             <div className="number-display-item">
